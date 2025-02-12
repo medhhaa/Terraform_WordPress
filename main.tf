@@ -33,6 +33,7 @@ resource "aws_security_group" "http_securitygroup" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
 
 
 # EC2 instance resource definition
