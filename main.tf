@@ -49,3 +49,12 @@ resource "aws_instance" "my_server" {
     Name = "my ec2"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "terraform-med-bucket"          # Specify your S3 bucket name
+    key    = "terraform/state/myproject.tfstate"  # Path within the bucket
+    region = "us-east-1"                     # Region where the S3 bucket is located
+  }
+}
+
